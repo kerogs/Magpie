@@ -13,7 +13,7 @@ $serverConfig = json_decode(file_get_contents("./data/serverconfig.json"), true)
     <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGACHI | <?= $type ?></title>
+    <title>Magpie | <?= $type ?></title>
     <link rel="stylesheet" href="./src/css/login.css">
 
     <?php require_once './src/php/head.php' ?>

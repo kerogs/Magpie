@@ -8,6 +8,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 $token = $_COOKIE['token'];
 
+// TODO make forceLogin works
 if (!isset($token)) {
     header('location: ./login/register');
     exit;

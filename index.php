@@ -10,7 +10,7 @@ require_once __DIR__ . '/src/php/core.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGACHI</title>
+    <title>Magpie</title>
 
     <link rel="stylesheet" href="./src/css/style.css">
 
@@ -24,7 +24,7 @@ require_once __DIR__ . '/src/php/core.php';
             <div class="website">
                 <div class="logo"><a href="./"><img src="./src/img/icon_white.svg" alt=""></a></div>
                 <div class="information">
-                    <div class="subtitle">GGACHI</div>
+                    <div class="subtitle">Magpie</div>
                     <div class="title">Home</div>
                 </div>
                 <div class="listbtn">
@@ -61,7 +61,7 @@ require_once __DIR__ . '/src/php/core.php';
                             </div>
                         </div>
                         <div class="account__buttons">
-                            <div class="version"><a href="https://github.com/kerogs/ggachi" target="_blank"><?= $websiteVersion ?></a></div>
+                            <div class="version"><a href="https://github.com/kerogs/Magpie" target="_blank"><?= $websiteVersion ?></a></div>
                             <div class="btn"><a href=""><i class='bx bx-cog'></i> Settings</a></div>
                         </div>
                     </div>
