@@ -1,0 +1,116 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #0F1317;
+  color: #E0E0E0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.login-select a {
+  margin: 0 4px;
+}
+.login-select button {
+  background-color: #0080ff;
+  text-align: center;
+  outline: none;
+  color: #E0E0E0;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+.login-select button:hover {
+  opacity: 0.9;
+}
+
+.login-go-index {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  display: flex;
+}
+.login-go-index a {
+  color: #E0E0E0;
+  text-decoration: none;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 9px solid #0080ff;
+  background-color: #1c1f22;
+  border-radius: 0.24rem;
+  padding: 12px 36px;
+  width: 660px;
+}
+.login h2 {
+  text-align: center;
+  margin: 16px 0 0 0;
+}
+.login h3 {
+  text-align: center;
+  color: #ddd;
+  margin: 0 0 16px 0;
+}
+.login p.label {
+  font-size: 17px;
+  font-weight: 500;
+}
+.login form {
+  overflow: hidden;
+}
+.login form input {
+  width: 100%;
+  border: none;
+  background: #343a3f;
+  font-size: 19px;
+  color: #ddd;
+  outline: none;
+  margin: 10px 0;
+  padding: 6px 9px;
+  border-radius: 0.3rem;
+  border: 3px solid #343a3f;
+}
+.login form button {
+  background-color: #0080ff;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  color: #E0E0E0;
+  border: none;
+  padding: 12px 0;
+  margin: 20px 0 10px 0;
+  cursor: pointer;
+}
+.login form button:hover {
+  opacity: 0.9;
+}
+.login form p.change {
+  text-align: right;
+}
+.login form p.change a {
+  color: #ddd;
+}
+.login .alt button {
+  background-color: #0F1317;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  color: #E0E0E0;
+  border: none;
+  padding: 12px 0;
+  margin: 20px 0 10px 0;
+  cursor: pointer;
+}
+.login .alt button:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=login.css.map */

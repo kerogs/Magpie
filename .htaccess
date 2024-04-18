@@ -1,0 +1,17 @@
+ErrorDocument 401 /401.php
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+ErrorDocument 502 /502.php
+ErrorDocument 504 /504.php
+
+RewriteEngine On
+
+RewriteRule ^userlist$ userlist.php
+RewriteRule ^profile-change$ profile-change.php
+RewriteRule ^admin-change$ admin-change.php
+RewriteRule ^clublist$ clublist.php
+RewriteRule ^club-change$ club-change.php
+
+RewriteRule ^login/([^/]+)/?$ login.php?t=$1 [L,QSA]
+RewriteRule ^profile/([^/]+)/?$ profile.php?u=$1 [L,QSA]

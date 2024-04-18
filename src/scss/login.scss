@@ -1,0 +1,144 @@
+$text: #E0E0E0;
+$textAlt : #ddd;
+$primary: #0080ff;
+$primaryAlt: #70B0F0;
+$primaryAlt2: #084A8B;
+$background: #0F1317;
+$backgroundalt:#343a3f;
+$backgroundalt2:#1c1f22;
+
+a{
+    text-decoration: none;
+}
+
+@mixin ccenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+    background-color: $background;
+    color: $text;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-select {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    a{
+        margin: 0 4px;
+    }
+
+    button {
+        background-color: $primary;
+        text-align: center;
+        outline: none;
+        color: $text;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.login-go-index{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    display: flex;
+
+    a{
+        color: $text;
+        text-decoration: none
+    }
+}
+
+.login {
+    @include ccenter();
+    border-top: 9px solid $primary;
+    background-color: $backgroundalt2;
+    border-radius: 0.24rem;
+
+    padding: 12px 36px;
+    width: 660px;
+
+    h2 {
+        text-align: center;
+        margin: 16px 0 0 0;
+    }
+    h3{
+        text-align: center;
+        color: $textAlt;
+        margin: 0 0 16px 0;
+    }
+
+    p.label {
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    form {
+        overflow: hidden;
+        input {
+            width: 100%;
+            border: none;
+            background: $backgroundalt;
+            font-size: 19px;
+            color: $textAlt;
+            outline: none;
+            margin: 10px 0;
+            padding: 6px 9px;
+            border-radius: 0.3rem;
+            border: 3px solid $backgroundalt;
+        }
+
+        button {
+            background-color: $primary;
+            width: 100%;
+            text-align: center;
+            outline: none;
+            color: $text;
+            border: none;
+            padding: 12px 0;
+            margin: 20px 0 10px 0;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        p.change {
+            text-align: right;
+            a {
+                color: $textAlt;
+            }
+        }
+    }
+
+    .alt {
+        button {
+            background-color: $background;
+            width: 100%;
+            text-align: center;
+            outline: none;
+            color: $text;
+            border: none;
+            padding: 12px 0;
+            margin: 20px 0 10px 0;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}

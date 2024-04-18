@@ -1,7 +1,0 @@
-{
-    "version":"1.1.1",
-    "security":{
-        "canLogin":true,
-        "canRegister":true
-    }
-}

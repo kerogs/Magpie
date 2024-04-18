@@ -71,3 +71,6 @@ yarn-debug.log*
 # .ksinf
 /.ksinf/.ignore/*
 !/.ksinf/.ignore/readme.md
+
+# Composer
+/vendor/

@@ -1,0 +1,11 @@
+{
+    "version": {
+        "version": "v1.1.3a"
+    },
+    "server": {
+        "registerAccount": true,
+        "signinWithAccountKey": true,
+        "signinWithPassword": true,
+        "forceLogin": true
+    }
+}
