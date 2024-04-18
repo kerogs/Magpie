@@ -82,128 +82,75 @@ require_once __DIR__ . '/src/php/core.php';
 
                 <div class="content_padding">
 
-                    <div class="topContent">
-                        <!-- calendar -->
-                        <div class="calendar">
-                            <div class="calendar__header">
-                                <h2>Calendar <span id="month">loading...</span></h2>
-                                <div class="btn">
-                                    <button id="before"><i class='bx bx-chevron-left'></i></button>
-                                    <button id="after"><i class='bx bx-chevron-right'></i></button>
-                                </div>
-                            </div>
-                            <div class="header">
-                                <div class="day">Lun.</div>
-                                <div class="day">Mar.</div>
-                                <div class="day">Mer.</div>
-                                <div class="day">Jeu.</div>
-                                <div class="day">Ven.</div>
-                                <div class="day">Sam.</div>
-                                <div class="day">Dim.</div>
-                            </div>
-                            <div class="days">
-                                <p class="loadingMsg">Loading...</p>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function() {
-                                const daysContainer = document.querySelector('.days');
-                                const beforeButton = document.querySelector('#before');
-                                const afterButton = document.querySelector('#after');
-
-                                let currentDate = new Date();
-                                let currentMonth = currentDate.getMonth();
-                                let currentYear = currentDate.getFullYear();
-
-                                renderCalendar(currentYear, currentMonth);
-
-                                function renderCalendar(year, month) {
-                                    // Clear previous days
-                                    daysContainer.innerHTML = '';
-
-                                    // Get the first day of the month
-                                    const firstDay = new Date(year, month, 1);
-                                    let startingDay = firstDay.getDay();
-
-                                    // Adjust starting day to start from Monday
-                                    startingDay = (startingDay === 0) ? 6 : startingDay - 1;
-
-                                    // Get the number of days in the month
-                                    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-                                    // Get the name of the month
-                                    const monthName = new Intl.DateTimeFormat('en-US', {
-                                        month: 'long'
-                                    }).format(firstDay);
-
-                                    // Update the month element
-                                    document.getElementById('month').textContent = monthName;
-
-                                    // Render the days
-                                    for (let i = 0; i < startingDay; i++) {
-                                        const emptyDay = document.createElement('div');
-                                        emptyDay.classList.add('empty');
-                                        daysContainer.appendChild(emptyDay);
-                                    }
-
-                                    for (let day = 1; day <= daysInMonth; day++) {
-                                        const dayElement = document.createElement('div');
-                                        dayElement.classList.add('day');
-                                        const numberElement = document.createElement('div');
-                                        numberElement.classList.add('number');
-                                        numberElement.textContent = day;
-                                        dayElement.appendChild(numberElement);
-                                        daysContainer.appendChild(dayElement);
-                                    }
-                                }
-
-                                beforeButton.addEventListener('click', function() {
-                                    currentMonth -= 1;
-                                    if (currentMonth < 0) {
-                                        currentMonth = 11;
-                                        currentYear -= 1;
-                                    }
-                                    renderCalendar(currentYear, currentMonth);
-                                });
-
-                                afterButton.addEventListener('click', function() {
-                                    currentMonth += 1;
-                                    if (currentMonth > 11) {
-                                        currentMonth = 0;
-                                        currentYear += 1;
-                                    }
-                                    renderCalendar(currentYear, currentMonth);
-                                });
-                            });
-                        </script>
-
-                        <!-- playlist video streaming -->
-                        <?php
-
-                        // ? check if user playlist exists in the user.json file
-                        if (!isset($accountJSON['playlist'])) {
-                            // ? if not, do nothing, else display the playlist with the container
-                        } else {
-                            // detect first if link is youtube or not
-                            if (strpos($accountJSON['playlist'], 'youtube.com') !== false) {
-                                $playlistClass = 'youtube';
-                            }
-
-                            echo '
-                                <div class="playlist ' . $playlistClass . '">
-                                    <div class="tempMSG">Loading <br> <i class="bx bx-loader bx-spin"></i></div>
-                                    <div class="iframe"> ' . $accountJSON['playlist'] . '</div>
-                                </div>
-                                ';
-                        }
-
-                        ?>
-                    </div>
-
-                    <hr class="sep">
-
                     <div class="grid-app">
+
+                        <div class="appList">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <p>Magpie Cloud</p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="./src/img/icon_white.svg" alt="">
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <p>Magpie Cloud</p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="./src/img/icon_white.svg" alt="">
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <p>Magpie Cloud</p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="./src/img/icon_white.svg" alt="">
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <p>Magpie Cloud</p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="./src/img/icon_white.svg" alt="">
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <p>Magpie Cloud</p>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
 
                     </div>
 

@@ -1,3 +1,5 @@
+@import './code/mixin';
+
 $text: #e0e0e0;
 $textAlt: #ddd;
 $primary: #0080ff;
@@ -27,7 +29,7 @@ main {
     display: flex;
 }
 
-hr.sep{
+hr.sep {
     margin: 10px 20px;
     border: 1px solid $backgroundalt;
 }
@@ -78,6 +80,7 @@ hr.sep{
         .listbtn {
             position: relative;
             margin: 10px;
+
             i {
                 position: absolute;
                 top: 50%;
@@ -97,6 +100,7 @@ hr.sep{
 
     nav {
         margin: 10px;
+
         ul {
             list-style: none;
             padding-left: 0;
@@ -115,8 +119,8 @@ hr.sep{
                 border-radius: 0.4rem;
                 margin: 10px 0;
 
-                &.admin{
-                    p.admin{
+                &.admin {
+                    p.admin {
                         font-size: 10px;
                         background-color: $primary;
                         padding: 2px;
@@ -151,6 +155,7 @@ hr.sep{
         position: absolute;
         bottom: 0;
         width: 100%;
+
         a {
             text-decoration: none;
             color: $textAlt;
@@ -162,14 +167,14 @@ hr.sep{
             border-radius: 0.7rem;
             overflow: hidden;
 
-            .filter{
+            .filter {
                 width: 100%;
                 height: 100%;
                 backdrop-filter: blur(10px);
                 background: #1c1f22c7;
                 padding: 5px 0px;
             }
-    
+
         }
 
         &__container {
@@ -274,135 +279,51 @@ hr.sep{
     }
 }
 
-.calendar {
-    // width: 400px;
-    margin: 0 auto;
-    border-radius: 0 0 12px 12px;
-
-    &__header {
-        display: flex;
-        align-items: center;
-        margin: 0 0 10px 0;
-
-        h2 {
-            font-weight: normal;
-            position: relative;
-            display: inline-block;
-            padding-left: 20px;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 15px;
-                height: 3px;
-                background-color: $primary;
-            }
-
-            span {
-                font-size: 14px;
-                color: #919191;
-            }
-        }
-
-        .btn {
-            margin-left: auto;
-
-            button {
-                width: 70px;
-                background-color: $primary;
-                color: #fff;
-                font-size: 1.2em;
-                border: none;
-
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.9;
-                }
-            }
-        }
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        background-color: $background;
-        padding: 10px;
-        font-weight: bold;
-    }
-
-    .day {
-        flex: 1;
-        text-align: center;
-    }
-
-    .days {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        border: 1px solid $primary;
-        border-radius: 0 0 12px 12px;
-        overflow: hidden;
-        position: relative;
-
-        > div {
-            text-align: center;
-            border: 1px solid $backgroundalt;
-            min-height: 80px;
-            position: relative;
-
-            .number {
-                top: 4px;
-                right: 8px;
-                position: absolute;
-                font-size: 1em;
-                font-weight: bold;
-            }
-
-            &:hover {
-                background-color: #343a3f;
-            }
-        }
-    }
-}
-
-.playlist{
-    margin: 0 0 0 10px;
-    position: relative;
-
-    .tempMSG{
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 0;
-    }
-    
-    iframe{
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        z-index: 99;
-    }
-
-    &.youtube iframe{
-        width: 100%;
-        height: 485px;
-        border-radius: .8rem;
-        border: 1px solid $primary;
-    }
-    
-    &.spotify iframe{
-        height: 485px;
-        border: 2px solid $primary;
-    }
-}
-
 .loadingMsg {
     text-align: center;
     color: $primary;
 }
 
+.appList {
+    ul {
+        @include reset-list;
+        display: -webkit-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
+        a{
+            flex: 1;
+            -webkit-flex: 130px 1;
+        }
+        
+        li{
+            position: relative;
+            min-width: 240px;
+            height: 140px;
+            padding: 10px;
+            border-radius: .73rem;
+            background-color: $background;
+            margin: 10px;
+            transition: .2s;
+            color: $text;
+            
+            &:hover{
+                box-shadow: 2px 2px 10px #0000004b;
+                transform: scale(1.01);
+            }
+
+            > div{
+                @include ccenter;
+
+                p{
+                    text-align: center;
+                    font-size: 24px;
+                }
+
+                img{
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
