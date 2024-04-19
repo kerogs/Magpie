@@ -6,6 +6,6 @@
         "registerAccount": true,
         "signinWithAccountKey": true,
         "signinWithPassword": true,
-        "forceLogin": false
+        "forceLogin": true
     }
 }
