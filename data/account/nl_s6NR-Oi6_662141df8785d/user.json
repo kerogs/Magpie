@@ -1,1 +1,25 @@
-{"account":{"token":"nl_s6NR-Oi6_662141df8785d","admin":false,"premium":false,"username":"kerogs","password":"$2y$10$fnPPmDtcwYtu.Sz5B5nVNupSkphrqeE.r.LCOD19wUl8wS8JiVimK","accountKey":"ksinf_HSjrg5OQSJvarGzZ","accountKeyStatus":true,"date":"2024-04-18 15:53:03","description":"this user has no description..."},"shop":{"money":0},"inventory":{"badge":{"b1":{"name":"Little newcomer","price":"0","rarity":"common-"}}}}
+{
+    "account": {
+        "token": "nl_s6NR-Oi6_662141df8785d",
+        "admin": false,
+        "premium": false,
+        "username": "kerogs",
+        "password": "$2y$10$fnPPmDtcwYtu.Sz5B5nVNupSkphrqeE.r.LCOD19wUl8wS8JiVimK",
+        "accountKey": "ksinf_HSjrg5OQSJvarGzZ",
+        "accountKeyStatus": true,
+        "date": "2024-04-18 15:53:03",
+        "description": "this user has no description..."
+    },
+    "shop": {
+        "money": 0
+    },
+    "inventory": {
+        "badge": {
+            "b1": {
+                "name": "Little newcomer",
+                "price": "0",
+                "rarity": "common-"
+            }
+        }
+    }
+}
