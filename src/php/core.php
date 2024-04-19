@@ -8,8 +8,10 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 $token = $_COOKIE['token'];
 
+$serverJSON = file_get_contents(json_decode('./data/serverconfig.json'), true);
+
 // TODO make forceLogin works
-if (!isset($token)) {
+if (!isset($token) && $serverJSON['server']['forceLogin']){
     header('location: ./login/register');
     exit;
 } else {
