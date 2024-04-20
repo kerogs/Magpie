@@ -2,7 +2,7 @@
 
 <p align="center">Magpie is your comprehensive dashboard solution, bringing together all your self-hosted services effortlessly.</p>
 
-## <img alt="ksmagpie icon" src=".ksinf/icon/icon-circle.svg" width=25> KSMagpie
+## <img alt="ksmagpie icon" src=".ksinf/icon/ksm.svg" width=25> KSMagpie
 ```bash
 git clone https://github.com/kerogs/Magpie.git
 ```
