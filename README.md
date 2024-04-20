@@ -50,3 +50,7 @@ Magpie is licensed under the Mozilla Public License 2.0 (MPL 2.0).
 - For a detailed overview of the Mozilla Public License 2.0, please refer to the official MPL 2.0 license text.
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+
+<div align="center">
+    <img alt="ksmagpie icon" src=".ksinf/image/badge-ksmagpie.png" width=140>
+</div>
