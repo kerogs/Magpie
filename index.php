@@ -38,7 +38,7 @@ require_once __DIR__ . '/src/php/core.php';
 
                         <div class="appList">
                             <ul>
-                                <a href="">
+                                <!-- <a href="">
                                     <li>
                                         <div>
                                             <p>Magpie Cloud</p>
@@ -51,58 +51,11 @@ require_once __DIR__ . '/src/php/core.php';
                                             <img src="./src/img/icon_white.svg" alt="">
                                         </div>
                                     </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <p>Magpie Cloud</p>
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <img src="./src/img/icon_white.svg" alt="">
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <p>Magpie Cloud</p>
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <img src="./src/img/icon_white.svg" alt="">
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <p>Magpie Cloud</p>
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <img src="./src/img/icon_white.svg" alt="">
-                                        </div>
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <div>
-                                            <p>Magpie Cloud</p>
-                                        </div>
-                                    </li>
-                                </a>
+                                </a> -->
 
-                                <?php if ($userName == 'kerogs') {
+                                <?php 
+                                
+                                if ($userName == 'kerogs') {
 
                                     echo '
                                     <a href="app/softscan/">

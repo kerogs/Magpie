@@ -2,7 +2,17 @@
 
 <p align="center">Magpie is your comprehensive dashboard solution, bringing together all your self-hosted services effortlessly.</p>
 
-## Docker
+## <img alt="ksmagpie icon" src=".ksinf/icon/icon-circle.svg" width=25> KSMagpie
+```bash
+git clone https://github.com/kerogs/Magpie.git
+```
+
+## <img alt="composer icon" src=".ksinf/icon/composer.png" width=25> Composer
+```bash
+composer install
+```
+
+## <img alt="docker icon" src=".ksinf/icon/docker.png" width=25> Docker
 To build it, simply run this command locally.
 ```bash
 docker compose up --build
