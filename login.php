@@ -22,6 +22,7 @@ $serverConfig = json_decode(file_get_contents("./data/serverconfig.json"), true)
 <body>
 
     <div class="login-go-index">
+        <img src="./src/img/logo.png" alt="">
         <p><a href="./">MAG<b>PIE</b></a></p>
     </div>
 
@@ -143,11 +144,15 @@ $serverConfig = json_decode(file_get_contents("./data/serverconfig.json"), true)
             echo '
                 <h2>Error</h2>
                 <h3>Something has just happened</h3>
-                <p>'.$_GET['m'].'</p>
+                <p>' . $_GET['m'] . '</p>
             ';
         }
 
         ?>
+    </div>
+
+    <div class="imgbck phonehide">
+        <img src="./src/img/logo.png" alt="">
     </div>
 
 </body>

@@ -39,6 +39,7 @@ hr.sep {
     // background-color: $backgroundalt2;
     width: 200px;
     height: 100vh;
+    transition: .4s;
 
     hr {
         margin: 10px 20px;
@@ -213,6 +214,71 @@ hr.sep {
             justify-content: space-around;
         }
     }
+
+    &.lightNav{
+        width: 80px;
+
+        .information,
+        .title,
+        ul li p,
+        .username,
+        .role,
+        .settings,
+        .version{
+            display: none;
+        }
+
+        .account__container{
+            display: block;
+            margin: 10px;
+            align-items: center;
+        }
+
+        ul li{
+            padding: 5px;
+            color: $text;
+            font-size: 1.5em;
+            display: block;
+            align-items: unset;
+            transition: 0.4s;
+            border-radius: 0.4rem;
+            margin: 10px 0;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $backgroundalt2;
+                color: $textAlt;
+                padding: 5px;
+            }
+
+            &.active {
+                background-color: $backgroundalt2;
+                color: $textAlt;
+                padding: 5px;
+                color: $primary;
+            }
+
+            i{
+                margin: 0;
+            }
+        }
+
+        .website{
+            position: relative;
+            height: 20px;
+            .logo{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -40%);
+            }
+        }
+
+        .listbtn{
+            display: none;
+        }
+    }
 }
 
 .content {
@@ -327,3 +393,10 @@ hr.sep {
         }
     }
 }
+
+#navPhone{
+    display: none;
+}
+
+// ! don't move this include
+@import "responsive/responsive";

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
@@ -35,10 +40,15 @@ body {
   left: 20px;
   font-size: 20px;
   display: flex;
+  align-items: center;
 }
 .login-go-index a {
   color: #E0E0E0;
   text-decoration: none;
+}
+.login-go-index img {
+  width: 42px;
+  margin: 0 5px 0 0;
 }
 
 .login {
@@ -113,4 +123,38 @@ body {
 }
 .login .alt button:hover {
   opacity: 0.9;
+}
+
+.imgbck {
+  position: fixed;
+  bottom: -60px;
+  right: -60px;
+  opacity: 0.1;
+  z-index: -1;
+  overflow: hidden;
+}
+.imgbck img {
+  height: 30vh;
+  z-index: -1;
+}
+
+@media screen and (max-width: 778px) {
+  .login {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: unset;
+    transform: translate(0, 0);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .phonehide {
+    display: none;
+  }
+}
+@media screen and (max-width: 464px) {
+  .login-go-index p {
+    display: none;
+  }
 }/*# sourceMappingURL=login.css.map */

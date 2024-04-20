@@ -7,6 +7,11 @@ $background: #0F1317;
 $backgroundalt:#343a3f;
 $backgroundalt2:#1c1f22;
 
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
 }
@@ -54,10 +59,17 @@ body{
     left: 20px;
     font-size: 20px;
     display: flex;
+    align-items: center;
+
 
     a{
         color: $text;
         text-decoration: none
+    }
+
+    img{
+        width: 42px;
+        margin: 0 5px 0 0
     }
 }
 
@@ -140,5 +152,41 @@ body{
                 opacity: 0.9;
             }
         }
+    }
+}
+
+.imgbck{
+    position: fixed;
+    bottom: -60px;
+    right: -60px;
+    opacity: 0.1;
+    z-index: -1;
+    overflow: hidden;
+    img{
+        height: 30vh;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:778px) {
+    .login{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        transform: translate(0, 0);
+
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .phonehide{
+        display: none;
+    }
+}
+
+@media screen and (max-width:464px){
+    .login-go-index p{
+        display: none;
     }
 }

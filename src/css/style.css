@@ -27,6 +27,7 @@ hr.sep {
   position: sticky;
   width: 200px;
   height: 100vh;
+  transition: 0.4s;
 }
 .nav hr {
   margin: 10px 20px;
@@ -165,6 +166,62 @@ hr.sep {
   align-items: center;
   justify-content: space-around;
 }
+.nav.lightNav {
+  width: 80px;
+}
+.nav.lightNav .information,
+.nav.lightNav .title,
+.nav.lightNav ul li p,
+.nav.lightNav .username,
+.nav.lightNav .role,
+.nav.lightNav .settings,
+.nav.lightNav .version {
+  display: none;
+}
+.nav.lightNav .account__container {
+  display: block;
+  margin: 10px;
+  align-items: center;
+}
+.nav.lightNav ul li {
+  padding: 5px;
+  color: #e0e0e0;
+  font-size: 1.5em;
+  display: block;
+  align-items: unset;
+  transition: 0.4s;
+  border-radius: 0.4rem;
+  margin: 10px 0;
+  text-align: center;
+}
+.nav.lightNav ul li:hover {
+  cursor: pointer;
+  background-color: #1c1f22;
+  color: #ddd;
+  padding: 5px;
+}
+.nav.lightNav ul li.active {
+  background-color: #1c1f22;
+  color: #ddd;
+  padding: 5px;
+  color: #0080ff;
+}
+.nav.lightNav ul li i {
+  margin: 0;
+}
+.nav.lightNav .website {
+  position: relative;
+  height: 20px;
+}
+.nav.lightNav .website .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.nav.lightNav .listbtn {
+  display: none;
+}
 
 .content {
   flex: 1;
@@ -263,4 +320,55 @@ hr.sep {
 }
 .appList ul li > div img {
   height: 80px;
+}
+
+#navPhone {
+  display: none;
+}
+
+@media screen and (max-width: 899px) {
+  .nav {
+    width: 200px;
+    transform: translateX(-100%);
+    display: none;
+    transition: width 0.4s ease, transform 0.4s ease;
+  }
+  .nav.active {
+    transition-delay: 1s;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(0);
+    background-color: #0f1317;
+    animation: 0.4s spawnNav forwards;
+    z-index: 999;
+  }
+  @keyframes spawnNav {
+    0% {
+      width: 20px;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .listbtn {
+    display: none;
+  }
+  #navPhone {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    z-index: 9999;
+  }
+  #navPhone i {
+    filter: drop-shadow(2px 2px 10px #000);
+  }
+  #navPhone.active {
+    left: unset;
+    right: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

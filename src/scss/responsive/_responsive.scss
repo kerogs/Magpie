@@ -1,0 +1,52 @@
+@media screen and (max-width:899px) {
+    .nav{
+        width: 200px;
+        transform: translateX(-100%);
+        display: none;
+        transition: width 0.4s ease, transform 0.4s ease;
+
+        &.active{
+            transition-delay: 1s;
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform: translate(0);
+            background-color: $background;
+            animation: .4s spawnNav forwards;
+
+            z-index: 999;
+        }
+    }
+
+    @keyframes spawnNav {
+        0%{
+            width: 20px;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+
+    .listbtn{
+        display: none;
+    }
+
+    #navPhone{
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        z-index: 9999;
+        i{
+            filter: drop-shadow(2px 2px 10px #000);
+        }
+
+        &.active{
+            left: unset;
+            right: 20px;
+        }
+    }
+}
