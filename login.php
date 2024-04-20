@@ -22,7 +22,7 @@ $serverConfig = json_decode(file_get_contents("./data/serverconfig.json"), true)
 <body>
 
     <div class="login-go-index">
-        <p><a href="./">GGA<b>CHI</b></a></p>
+        <p><a href="./">MAG<b>PIE</b></a></p>
     </div>
 
     <div class="login-select">

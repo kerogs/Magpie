@@ -2,6 +2,15 @@
 
 <p align="center">Magpie is your comprehensive dashboard solution, bringing together all your self-hosted services effortlessly.</p>
 
+## Docker
+To build it, simply run this command locally.
+```bash
+docker compose up --build
+```
+
+Image result (from ***docker desktop***)
+![alt text](.ksinf/image/dockerDesktop.png)
+
 ## 🌟 About Magpie
 Magpie was born out of the vision to simplify the management of self-hosted applications. Initially conceived as NunaLab, a personal project, Magpie has evolved into a robust platform designed to streamline your self-hosted ecosystem. With a sleek interface and powerful features, Magpie aims to enhance your experience in managing various services while maintaining simplicity and elegance.
 
