@@ -1,6 +1,6 @@
 {
     "version": {
-        "version": "v1.1.5a"
+        "version": "v1.1.6a"
     },
     "server": {
         "registerAccount": true,
