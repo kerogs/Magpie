@@ -215,7 +215,7 @@ hr.sep {
         }
     }
 
-    &.lightNav{
+    &.lightNav {
         width: 80px;
 
         .information,
@@ -224,17 +224,17 @@ hr.sep {
         .username,
         .role,
         .settings,
-        .version{
+        .version {
             display: none;
         }
 
-        .account__container{
+        .account__container {
             display: block;
             margin: 10px;
             align-items: center;
         }
 
-        ul li{
+        ul li {
             padding: 5px;
             color: $text;
             font-size: 1.5em;
@@ -259,15 +259,16 @@ hr.sep {
                 color: $primary;
             }
 
-            i{
+            i {
                 margin: 0;
             }
         }
 
-        .website{
+        .website {
             position: relative;
             height: 20px;
-            .logo{
+
+            .logo {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -275,7 +276,7 @@ hr.sep {
             }
         }
 
-        .listbtn{
+        .listbtn {
             display: none;
         }
     }
@@ -357,12 +358,12 @@ hr.sep {
         flex-direction: row;
         flex-wrap: wrap;
 
-        a{
+        a {
             flex: 1;
             -webkit-flex: 130px 1;
         }
-        
-        li{
+
+        li {
             position: relative;
             min-width: 240px;
             height: 140px;
@@ -372,21 +373,21 @@ hr.sep {
             margin: 10px;
             transition: .2s;
             color: $text;
-            
-            &:hover{
+
+            &:hover {
                 box-shadow: 2px 2px 10px #0000004b;
                 transform: scale(1.01);
             }
 
-            > div{
+            >div {
                 @include ccenter;
 
-                p{
+                p {
                     text-align: center;
                     font-size: 24px;
                 }
 
-                img{
+                img {
                     height: 80px;
                 }
             }
@@ -394,9 +395,122 @@ hr.sep {
     }
 }
 
-#navPhone{
+#navPhone {
     display: none;
 }
+
+
+.ide {
+    display: flex;
+    height: 100%;
+
+    .left {
+        min-width: 250px;
+        position: relative;
+
+        .top {
+            text-align: right;
+            margin: 10px 10px 10px 0;
+
+            button {
+                cursor: pointer;
+                background: none;
+                outline: none;
+                border: none;
+                color: $primary;
+                font-size: 1.5em;
+                width: 26px;
+                border-radius: .75rem;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+
+            a {
+                color: $textAlt;
+                text-decoration: none;
+            }
+
+            li {
+                margin: 5px;
+                padding: 7px 10px;
+                font-size: 18px;
+                border-radius: .4rem;
+                transition: .2s;
+
+                i {
+                    margin: 0 6px 0 0;
+                }
+
+                &:hover {
+                    background-color: $backgroundalt;
+                }
+            }
+
+            ul {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+        background-color: $background;
+
+        form {
+            height: 100%;
+
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                background: none;
+                color: $text;
+                font-size: 20px;
+                outline: none;
+                background-color: #ffffff09;
+                padding: 6px 10px;
+            }
+
+            button {
+                position: absolute;
+                top: 7px;
+                right: 20px;
+                cursor: pointer;
+                background: none;
+                outline: none;
+                font-size: 2em;
+                color: $primary;
+                border: none;
+            }
+
+            textarea {
+                width: 100%;
+                height: calc(100vh - 59px);
+                resize: none;
+                border: none;
+                background: none;
+                color: $text;
+                font-size: 18px;
+                outline: none;
+                padding: 6px 10px;
+            }
+        }
+
+        pre {
+            padding: 20px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
 
 // ! don't move this include
 @import "responsive/responsive";

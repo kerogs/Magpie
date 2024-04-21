@@ -326,6 +326,95 @@ hr.sep {
   display: none;
 }
 
+.ide {
+  display: flex;
+  height: 100%;
+}
+.ide .left {
+  min-width: 250px;
+  position: relative;
+}
+.ide .left .top {
+  text-align: right;
+  margin: 10px 10px 10px 0;
+}
+.ide .left .top button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  color: #0080ff;
+  font-size: 1.5em;
+  width: 26px;
+  border-radius: 0.75rem;
+}
+.ide .left ul {
+  padding-left: 0;
+  list-style: none;
+}
+.ide .left ul a {
+  color: #ddd;
+  text-decoration: none;
+}
+.ide .left ul li {
+  margin: 5px;
+  padding: 7px 10px;
+  font-size: 18px;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+}
+.ide .left ul li i {
+  margin: 0 6px 0 0;
+}
+.ide .left ul li:hover {
+  background-color: #343a3f;
+}
+.ide .left ul ul {
+  margin-left: 10px;
+}
+.ide .right {
+  flex: 1;
+  background-color: #0f1317;
+}
+.ide .right form {
+  height: 100%;
+}
+.ide .right form input[type=text] {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #e0e0e0;
+  font-size: 20px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.0352941176);
+  padding: 6px 10px;
+}
+.ide .right form button {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  font-size: 2em;
+  color: #0080ff;
+  border: none;
+}
+.ide .right form textarea {
+  width: 100%;
+  height: calc(100vh - 59px);
+  resize: none;
+  border: none;
+  background: none;
+  color: #e0e0e0;
+  font-size: 18px;
+  outline: none;
+  padding: 6px 10px;
+}
+.ide .right pre {
+  padding: 20px;
+}
+
 @media screen and (max-width: 899px) {
   .nav {
     width: 200px;

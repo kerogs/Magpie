@@ -1,3 +1,9 @@
+<?php
+
+    $currentFile = basename($_SERVER['PHP_SELF']);
+
+?>
+
 <div id="navPhone"><i class='bx bxs-dock-left'></i></div>
 
 <div class="nav">
@@ -17,8 +23,13 @@
     <nav>
         <ul>
             <a href="./">
-                <li class="active"><i class='bx bxs-dashboard'></i>
+                <li class="<?= $currentFile == 'index.php' ? 'active' : ''; ?>"><i class='bx bxs-dashboard'></i>
                     <p>Home</p>
+                </li>
+            </a>
+            <a href="./ide">
+                <li class="<?= $currentFile == 'ide.php' ? 'active' : ''; ?>"><i class='bx bx-code-alt'></i>
+                    <p>Code</p>
                 </li>
             </a>
             <a href="./">
@@ -67,4 +78,3 @@
         });
     });
 </script>
-

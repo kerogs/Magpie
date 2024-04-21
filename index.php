@@ -52,23 +52,6 @@ require_once __DIR__ . '/src/php/core.php';
                                         </div>
                                     </li>
                                 </a> -->
-
-                                <?php 
-                                
-                                if ($userName == 'kerogs') {
-
-                                    echo '
-                                    <a href="app/softscan/">
-                                    <li>
-                                        <div>
-                                            <p>SoftScan</p>
-                                        </div>
-                                    </li>
-                                </a>
-                                    ';
-                                }
-
-                                ?>
                             </ul>
                         </div>
 

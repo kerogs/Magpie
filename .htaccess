@@ -12,6 +12,7 @@ RewriteRule ^profile-change$ profile-change.php
 RewriteRule ^admin-change$ admin-change.php
 RewriteRule ^clublist$ clublist.php
 RewriteRule ^club-change$ club-change.php
+RewriteRule ^ide$ ide.php
 
 RewriteRule ^login/([^/]+)/?$ login.php?t=$1 [L,QSA]
 RewriteRule ^profile/([^/]+)/?$ profile.php?u=$1 [L,QSA]

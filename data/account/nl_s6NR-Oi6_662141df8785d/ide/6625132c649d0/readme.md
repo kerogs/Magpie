@@ -65,4 +65,4 @@ Magpie is licensed under the Mozilla Public License 2.0 (MPL 2.0).
     <img alt="ksmagpie icon" src=".ksinf/image/badge-ksmagpie.png" width=140>
 </div>
 
-<img src="https://contrib.rocks/image?repo=kerogs/magpie"/>
+<img src = "https://contrib.rocks/image?repo=kerogs/magpie"/>
