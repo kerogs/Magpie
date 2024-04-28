@@ -16,6 +16,7 @@ is_dir($userPathIDE) ? null : mkdir($userPathIDE);
     <title>Magpie</title>
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/markdown.css">
 
     <?php require_once __DIR__ . '/src/php/inc/head.php'; ?>
 </head>
@@ -142,39 +143,38 @@ is_dir($userPathIDE) ? null : mkdir($userPathIDE);
                     </div>
 
                     <div class="right">
-                        <div class="right">
-                            <?php
-                            if (isset($_GET['file'])) {
-                                $fichier = $userPathIDE . '/' . $_GET['folder'] . '/' . $_GET['file'];
-                                if (file_exists($fichier)) {
-                                    // Vérifie si le mode édition est activé
-                                    $editMode = isset($_GET['edit']) && $_GET['edit'] === 'true';
+                        <?php
+                        if (isset($_GET['file'])) {
+                            $fichier = $userPathIDE . '/' . $_GET['folder'] . '/' . $_GET['file'];
+                            if (file_exists($fichier)) {
+                                $editMode = isset($_GET['edit']) && $_GET['edit'] === 'true';
 
-                                    // Récupère le contenu actuel du fichier en dehors de la condition
-                                    $fileContent = file_get_contents($fichier);
+                                $fileContent = file_get_contents($fichier);
 
-                                    // Si le mode édition est activé, affiche le formulaire d'édition
-                                    if ($editMode) {
-                            ?>
-                                        <form method="post" action="ide-send.php">
-                                            <input type="hidden" name="file" value="<?= $_GET['file'] ?>">
-                                            <input type="hidden" name="folder" value="<?= $_GET['folder'] ?>">
-                                            <input type="text" id="newFileName" name="newFileName" value="<?= $_GET['file'] ?>"><br>
-                                            <textarea placeholder="Write here" id="fileContent" name="fileContent"><?= htmlspecialchars($fileContent) ?></textarea><br>
-                                            <button title="save"><i class='bx bxs-save'></i></button>
-                                        </form>
-                            <?php } else {
-                                        // Si le mode édition n'est pas activé, affiche simplement le contenu du fichier
+                                if ($editMode) {
+                        ?>
+                                    <form method="post" action="ide-send.php">
+                                        <input type="hidden" name="file" value="<?= $_GET['file'] ?>">
+                                        <input type="hidden" name="folder" value="<?= $_GET['folder'] ?>">
+                                        <input type="text" id="newFileName" name="newFileName" value="<?= $_GET['file'] ?>"><br>
+                                        <textarea placeholder="Write here" id="fileContent" name="fileContent"><?= htmlspecialchars($fileContent) ?></textarea><br>
+                                        <button title="save"><i class='bx bxs-save'></i></button>
+                                    </form>
+                        <?php } else {
+                                    // Si le mode édition n'est pas activé, affiche simplement le contenu du fichier
+
+                                    // Si fichier md
+                                    if (pathinfo($fichier)['extension'] == 'md') {
+                                        echo '<div class="markdown">' . (new Parsedown())->text($fileContent) . '</div>';
+                                    } else {
                                         echo '<pre>' . htmlspecialchars($fileContent) . '</pre>';
                                     }
-                                } else {
-                                    echo "<span class='error'>Erreur, fichier non trouvé.</span>";
                                 }
+                            } else {
+                                echo "<span class='error'>Erreur, fichier non trouvé.</span>";
                             }
-                            ?>
-
-                        </div>
-
+                        }
+                        ?>
                     </div>
                 </div>
 

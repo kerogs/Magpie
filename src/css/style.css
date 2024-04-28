@@ -411,8 +411,11 @@ hr.sep {
   outline: none;
   padding: 6px 10px;
 }
-.ide .right pre {
+.ide .right pre, .ide .right .markdown {
   padding: 20px;
+  max-height: 100%;
+  overflow-y: auto;
+  width: 100%;
 }
 
 @media screen and (max-width: 899px) {

@@ -1,0 +1,28 @@
+.markdown {
+  width: 600px;
+  color: #e0e0e0;
+}
+.markdown img {
+  max-width: 600px;
+}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown p {
+  padding-bottom: 0.3em;
+  margin: 10px 0;
+}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  color: #0080ff;
+}
+.markdown h1, .markdown h2 {
+  border-bottom: 1px solid #fff;
+  display: block;
+}
+.markdown a {
+  color: #70b0f0;
+}
+.markdown a:hover {
+  color: #084a8b;
+}
+.markdown pre {
+  background-color: #343a3f;
+  border-radius: 0.33rem;
+}/*# sourceMappingURL=markdown.css.map */

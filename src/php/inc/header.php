@@ -46,7 +46,7 @@
             <div class="filter">
                 <div class="account__container">
                     <div class="img">
-                        <a href=""><img src="<?= $userPfp ?>" alt=""></a>
+                        <a href="profile/<?= $userName ?>"><img src="<?= $userPfp ?>" alt=""></a>
                     </div>
                     <div class="name">
                         <p class="username"><?= $userName ?></p>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="account__buttons">
                     <div class="version"><a href="https://github.com/kerogs/Magpie" target="_blank"><?= $websiteVersion ?></a></div>
-                    <div class="btn"><a href=""><i class='bx bx-cog'></i> <span class="settings">Settings</span></a></div>
+                    <div class="btn"><a href="profile-change"><i class='bx bx-cog'></i> <span class="settings">Settings</span></a></div>
                 </div>
             </div>
         </div>

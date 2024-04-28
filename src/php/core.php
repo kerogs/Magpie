@@ -4,8 +4,6 @@ ini_set('display_errors', 'Off');
 error_reporting(E_ALL & ~E_NOTICE);
 // ini_set('log_errors', 'On');
 
-// ! Don't touch to this file.
-
 $token = $_COOKIE['token'];
 
 // $serverJSON = file_get_contents(json_decode('./data/serverconfig.json'), true);
@@ -19,6 +17,7 @@ if (!isset($token)){
     // ! Please do not change this.
     require_once __DIR__ . '/lib/ksmagpie_init/php/php_ini.php';
     require_once __DIR__ . '/functions.php';
+    require_once 'vendor/autoload.php';
 
     $accountPath = "./data/account/$token/user.json";
     $accountPathUrl = "./data/account/$token";

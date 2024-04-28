@@ -1,0 +1,43 @@
+$text: #e0e0e0;
+$textAlt: #ddd;
+$primary: #0080ff;
+$primaryAlt: #70b0f0;
+$primaryAlt2: #084a8b;
+$background: #0f1317;
+$backgroundalt: #343a3f;
+$backgroundalt2: #1c1f22;
+
+.markdown{
+    width: 600px;
+    color: $text;
+    img{
+        max-width: 600px;
+    }
+
+    h1, h2, h3, h4, h5, h6, p{
+        padding-bottom: .3em;
+        margin: 10px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        color: $primary;
+    }
+
+    h1, h2{
+        border-bottom: 1px solid #fff;
+        display: block;
+    }
+
+    a{
+        color: $primaryAlt;
+
+        &:hover{
+            color: $primaryAlt2;
+        }
+    }
+
+    pre{
+        background-color: #343a3f;
+        border-radius: .33rem;
+    }
+}
