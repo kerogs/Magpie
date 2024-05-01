@@ -43,8 +43,18 @@ is_dir($userPathIDE) ? null : mkdir($userPathIDE);
                                     echo '<a title="back" href="ide?folder=' . urlencode($parentFolder) . '/"><button><i class="bx bx-chevron-left"></i></button></a>';
                                 }
                                 echo '<a title="new file" href="ide-send.php?a=newfile&folder=' . urlencode($_GET['folder']) . '"><button id="newFolder"><i class="bx bxs-file-plus"></i></button></a>';
-                                echo '<a title="new folder" href="ide-send.php?a=newsubfolder&folder=' . urlencode($_GET['folder'])  . '"><button><i class="bx bxs-folder-plus"></i></button></a>';
-                                echo '<a title="Edit" href="ide?folder=' . urlencode($_GET['folder']) . '&file=' . $_GET['file'] . '&edit=true"><button><i class="bx bxs-edit-alt"></i></button></a>';
+                                if (!isset($_GET['folder'])) {
+                                    echo '<a title="new folder" href="ide-send.php?a=newsubfolder&folder=' . urlencode($_GET['folder'])  . '"><button><i class="bx bxs-folder-plus"></i></button></a>';
+                                }
+                                if(isset($_GET['folder'])) {
+                                    echo '<a title="Remove file" href="ide-send.php?a=removeFolder&folder=' . urlencode($_GET['folder'])  . '"><button><i class="bx bxs-folder-minus" ></i></button></a>';
+                                }
+                                if (isset($_GET['file'])) {
+                                    echo '<a title="Edit" href="ide?folder=' . urlencode($_GET['folder']) . '&file=' . $_GET['file'] . '&edit=true"><button><i class="bx bxs-edit-alt"></i></button></a>';
+                                    echo '<a title="Remove file" href="ide-send.php?a=removeFile&folder=' . urlencode($_GET['folder'])  . '&file=' . $_GET['file'] . '"><button><i class="bx bxs-trash"></i></button></a>';
+                                } else {
+                                    echo '<a title="Edit" href="ide?folder=' . urlencode($_GET['folder']) . '&edit=true"><button><i class="bx bxs-edit-alt"></i></button></a>';
+                                }
                             }
                             ?>
                             <hr>
@@ -144,7 +154,7 @@ is_dir($userPathIDE) ? null : mkdir($userPathIDE);
 
                     <div class="right">
                         <?php
-                        if (isset($_GET['file'])) {
+                        if (isset($_GET['file']) || isset($_GET['folder'])) {
                             $fichier = $userPathIDE . '/' . $_GET['folder'] . '/' . $_GET['file'];
                             if (file_exists($fichier)) {
                                 $editMode = isset($_GET['edit']) && $_GET['edit'] === 'true';
@@ -156,7 +166,7 @@ is_dir($userPathIDE) ? null : mkdir($userPathIDE);
                                     <form method="post" action="ide-send.php">
                                         <input type="hidden" name="file" value="<?= $_GET['file'] ?>">
                                         <input type="hidden" name="folder" value="<?= $_GET['folder'] ?>">
-                                        <input type="text" id="newFileName" name="newFileName" value="<?= $_GET['file'] ?>"><br>
+                                        <input type="text" id="newFileName" name="newFileName" value="<?php echo isset($_GET['file']) ? $_GET['file'] : basename($_GET['folder']) ?>"><br>
                                         <textarea placeholder="Write here" id="fileContent" name="fileContent"><?= htmlspecialchars($fileContent) ?></textarea><br>
                                         <button title="save"><i class='bx bxs-save'></i></button>
                                     </form>

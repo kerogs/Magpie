@@ -10,7 +10,7 @@ img {
 }
 
 body {
-  background-color: #0f1317;
+  background-color: #111116;
   color: #e0e0e0;
 }
 
@@ -20,7 +20,7 @@ main {
 
 hr.sep {
   margin: 10px 20px;
-  border: 1px solid #343a3f;
+  border: 1px solid #1a1920;
 }
 
 .nav {
@@ -68,12 +68,12 @@ hr.sep {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 4px;
-  background-color: #343a3f;
+  background-color: #1a1920;
   border-radius: 0.4rem;
 }
 .nav .website .listbtn i:hover {
   cursor: pointer;
-  background-color: #1c1f22;
+  background-color: #1a1920;
 }
 .nav nav {
   margin: 10px;
@@ -97,7 +97,7 @@ hr.sep {
 }
 .nav nav ul li.admin p.admin {
   font-size: 10px;
-  background-color: #0080ff;
+  background-color: #6b6bff;
   padding: 2px;
   margin-left: auto;
 }
@@ -106,15 +106,15 @@ hr.sep {
 }
 .nav nav ul li:hover {
   cursor: pointer;
-  background-color: #1c1f22;
+  background-color: #1a1920;
   color: #ddd;
   padding: 7px 10px;
 }
 .nav nav ul li.active {
-  background-color: #1c1f22;
+  background-color: #1a1920;
   color: #ddd;
   padding: 7px 10px;
-  color: #0080ff;
+  color: #6b6bff;
 }
 .nav .account {
   position: absolute;
@@ -126,7 +126,7 @@ hr.sep {
   color: #ddd;
 }
 .nav .account__in {
-  background: #1c1f22;
+  background: #1a1920;
   margin: 10px;
   border-radius: 0.7rem;
   overflow: hidden;
@@ -196,15 +196,15 @@ hr.sep {
 }
 .nav.lightNav ul li:hover {
   cursor: pointer;
-  background-color: #1c1f22;
+  background-color: #1a1920;
   color: #ddd;
   padding: 5px;
 }
 .nav.lightNav ul li.active {
-  background-color: #1c1f22;
+  background-color: #1a1920;
   color: #ddd;
   padding: 5px;
-  color: #0080ff;
+  color: #6b6bff;
 }
 .nav.lightNav ul li i {
   margin: 0;
@@ -231,7 +231,7 @@ hr.sep {
 }
 .content .sub_content {
   margin: 10px;
-  background-color: #1c1f22;
+  background-color: #1a1920;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   border-radius: 12px;
@@ -262,7 +262,7 @@ hr.sep {
   font-size: 1.6em;
 }
 .content .banner .filter .message a {
-  color: #0080ff;
+  color: #6b6bff;
   text-decoration: none;
 }
 
@@ -278,7 +278,7 @@ hr.sep {
 
 .loadingMsg {
   text-align: center;
-  color: #0080ff;
+  color: #6b6bff;
 }
 
 .appList ul {
@@ -299,7 +299,7 @@ hr.sep {
   height: 140px;
   padding: 10px;
   border-radius: 0.73rem;
-  background-color: #0f1317;
+  background-color: #111116;
   margin: 10px;
   transition: 0.2s;
   color: #e0e0e0;
@@ -343,7 +343,7 @@ hr.sep {
   background: none;
   outline: none;
   border: none;
-  color: #0080ff;
+  color: #6b6bff;
   font-size: 1.5em;
   width: 26px;
   border-radius: 0.75rem;
@@ -367,14 +367,14 @@ hr.sep {
   margin: 0 6px 0 0;
 }
 .ide .left ul li:hover {
-  background-color: #343a3f;
+  background-color: #1a1920;
 }
 .ide .left ul ul {
   margin-left: 10px;
 }
 .ide .right {
   flex: 1;
-  background-color: #0f1317;
+  background-color: #111116;
 }
 .ide .right form {
   height: 100%;
@@ -397,7 +397,7 @@ hr.sep {
   background: none;
   outline: none;
   font-size: 2em;
-  color: #0080ff;
+  color: #6b6bff;
   border: none;
 }
 .ide .right form textarea {
@@ -433,7 +433,7 @@ hr.sep {
     height: 100%;
     width: 100%;
     transform: translate(0);
-    background-color: #0f1317;
+    background-color: #111116;
     animation: 0.4s spawnNav forwards;
     z-index: 999;
   }

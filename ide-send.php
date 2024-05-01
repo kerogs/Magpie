@@ -13,6 +13,35 @@ if ($action == 'newfolder') {
     exit;
 }
 
+// Vérification et changement de nom de dossier si $_POST['file'] est vide
+if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['file'])) {
+    // Récupérer le nom du dossier actuel et le nouveau nom de dossier
+    $folder = $_POST['folder']; // Nom du dossier actuel
+    $newFolderName = $_POST['newFileName']; // Nouveau nom du dossier
+
+    // Chemin complet du dossier actuel
+    $folderPath = "$userPathIDE/$folder";
+
+    // Vérifier si le dossier existe
+    if (is_dir($folderPath)) {
+        // Construire le nouveau chemin complet pour le dossier
+        $newFolderPath = "$userPathIDE/$newFolderName";
+
+        // Changer le nom du dossier
+        rename($folderPath, $newFolderPath);
+
+        // Redirection vers le nouveau chemin du dossier
+        header("Location: ./ide?folder=$newFolderName");
+        exit;
+    } else {
+        // Gérer le cas où le dossier n'existe pas
+        echo "Le dossier spécifié n'existe pas.";
+        exit;
+    }
+}
+
+
+
 if ($action == 'newfile' && isset($_GET['folder'])) {
     $folder = $_GET['folder'];
     // Vérification si le dossier existe
@@ -37,13 +66,31 @@ if ($action == 'newfile' && isset($_GET['folder'])) {
     }
 }
 
-if ($action == 'newsubfolder' && isset($_GET['folder'])) {
+if ($action == 'removeFile' && isset($_GET['folder'], $_GET['file'])) {
     $folder = $_GET['folder'];
-    // Création du sous-dossier avec un nom unique
-    mkdir("$userPathIDE/$folder/" . uniqid());
+    $file = $_GET['file'];
+    $filePath = "$userPathIDE/$folder/$file";
+    unlink($filePath);
     header("Location: ide?folder=$folder");
     exit;
 }
+
+if ($action == 'removeFolder' && isset($_GET['folder'])) {
+    $folder = $_GET['folder'];
+    $filePath = "$userPathIDE/$folder";
+    // echo $filePath;
+    rmdir($filePath);
+    header("Location: ide");
+    exit;
+}
+
+// if ($action == 'newsubfolder' && isset($_GET['folder'])) {
+//     $folder = $_GET['folder'];
+//     // Création du sous-dossier avec un nom unique
+//     mkdir("$userPathIDE/$folder/" . uniqid());
+//     header("Location: ide?folder=$folder");
+//     exit;
+// }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifie si les données POST nécessaires sont présentes
@@ -75,9 +122,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-?>
-
-
-header('Location: ide');
-exit;
-?>

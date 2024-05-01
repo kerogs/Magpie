@@ -2,12 +2,21 @@
 
 $text: #e0e0e0;
 $textAlt: #ddd;
-$primary: #0080ff;
-$primaryAlt: #70b0f0;
-$primaryAlt2: #084a8b;
-$background: #0f1317;
-$backgroundalt: #343a3f;
-$backgroundalt2: #1c1f22;
+$primary: #593C96;
+$primaryAlt: #3f2c69;
+$primaryAlt2: #593C96;
+$background: #111116;
+$backgroundalt: #1a1920;
+$backgroundalt2: #1a1920;
+
+// $text: #e0e0e0;
+// $textAlt: #ddd;
+// $primary: #0080ff;
+// $primaryAlt: #70b0f0;
+// $primaryAlt2: #084a8b;
+// $background: #0f1317;
+// $backgroundalt: #343a3f;
+// $backgroundalt2: #1c1f22;
 
 * {
     margin: 0;
@@ -316,7 +325,7 @@ hr.sep {
             position: relative;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, rgba(17, 18, 23, 0.849) 0%, rgba(27, 40, 56, 0) 70%);
+            background: linear-gradient(0deg, rgba(38, 34, 46, 0.849) 0%, rgba(27, 40, 56, 0) 70%);
 
             .message {
                 position: absolute;
