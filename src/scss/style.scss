@@ -2,12 +2,22 @@
 
 $text: #e0e0e0;
 $textAlt: #ddd;
-$primary: #593C96;
-$primaryAlt: #3f2c69;
-$primaryAlt2: #593C96;
-$background: #111116;
-$backgroundalt: #1a1920;
-$backgroundalt2: #1a1920;
+$primary: #2877ed;
+$primaryAlt: #17407e;
+$primaryAlt2: #5096ff;
+$background: #0f1624;
+$backgroundalt: #161b2b;
+$backgroundalt2: #1a2133;
+
+
+// $text: #e0e0e0;
+// $textAlt: #ddd;
+// $primary: #593C96;
+// $primaryAlt: #3f2c69;
+// $primaryAlt2: #593C96;
+// $background: #111116;
+// $backgroundalt: #1a1920;
+// $backgroundalt2: #1a1920;
 
 // $text: #e0e0e0;
 // $textAlt: #ddd;
@@ -181,7 +191,7 @@ hr.sep {
                 width: 100%;
                 height: 100%;
                 backdrop-filter: blur(10px);
-                background: #1c1f22c7;
+                background: $backgroundalt2;
                 padding: 5px 0px;
             }
 
